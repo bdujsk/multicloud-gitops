@@ -7,32 +7,32 @@ clusterGroup:
   name: group-one
   isHubCluster: false
   namespaces:
-    - config-demo
     - hello-world
-    - golang-external-secrets
-  # The only subscription on spokes is gitops which gets managed by ACM
-  # subscriptions:
+    - sample-app
   projects:
-    - eso
-    - config-demo
     - hello-world
+    - sample-app
+  subscriptions:
+    arcade:
+      channel: alpha
+      installPlanApproval: Automatic
+      name: marketplace-games-operator
+      source: certified-operators
+      sourceNamespace: openshift-marketplace
+      startingCSV: marketplace-games-operator.v1.0.0
   applications:
-    golang-external-secrets:
-      name: golang-external-secrets
-      namespace: golang-external-secrets
-      project: eso
-      chart: golang-external-secrets
-      chartVersion: 0.1.*
-    config-demo:
-      name: config-demo
-      namespace: config-demo
-      project: config-demo
-      path: charts/all/config-demo
     hello-world:
       name: hello-world
       namespace: hello-world
       project: hello-world
       path: charts/all/hello-world
+    sample-app:
+      name: sample-app
+      namespace: sample-app
+      project: sample-app
+      repoURL: https://github.com/jstrahle/sample-app.git
+      path: charts/sample-app
+      targetRevision: main
   imperative:
     # NOTE: We *must* use lists and not hashes. As hashes lose ordering once parsed by helm
     # The default schedule is every 10 minutes: imperative.schedule
