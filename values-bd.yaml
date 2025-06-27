@@ -4,7 +4,8 @@ global:
     syncPolicy: Automatic
     installPlanApproval: Automatic
 clusterGroup:
-  name: group-one
+  name: bd            #  clusterGroup=bd
+#  name: group-one    #  husk label clusterGroup=group-one paa bd-oob-dev cluster
   isHubCluster: false
   namespaces:
     - hello-world
