@@ -34,6 +34,14 @@ clusterGroup:
       repoURL: https://github.com/jstrahle/sample-app.git
       path: charts/sample-app
       targetRevision: main
+    sample-app2:
+      name: sample-app2
+      namespace: sample-app2
+      project: sample-app2
+      repoURL: https://github.com/jstrahle/sample-app.git
+      path: charts/sample-app
+      targetRevision: main
+
   imperative:
     # NOTE: We *must* use lists and not hashes. As hashes lose ordering once parsed by helm
     # The default schedule is every 10 minutes: imperative.schedule
