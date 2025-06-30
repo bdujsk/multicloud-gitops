@@ -10,9 +10,11 @@ clusterGroup:
   namespaces:
     - hello-world
     - sample-app
+    - sample-app2
   projects:
     - hello-world
     - sample-app
+    - sample-app2
   subscriptions:
     arcade:
       channel: alpha
