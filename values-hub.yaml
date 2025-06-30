@@ -66,10 +66,10 @@ clusterGroup:
         # verbosity: "-v"
   managedClusterGroups:
     exampleRegion:
-      name: group-one
+      name: bd
       acmlabels:
         - name: clusterGroup
-          value: group-one
+          value: bd
       helmOverrides:
         - name: clusterGroup.isHubCluster
           value: false
