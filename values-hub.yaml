@@ -1,5 +1,5 @@
 clusterGroup:
-  name: hub
+  name: hub      #  namespace bliver til validated Pattern navn  + dette navn  -->   ose-gitops-hub namespace  som er dette clusters apps ex propropro mm    (  openshift-gitops namespace indeholder ose-gitops-hub argo app)
   isHubCluster: true
   namespaces:
     - open-cluster-management

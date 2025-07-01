@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ose-gitops-ahx
+  labels:
+    business-project: bankdata
+  annotations:
+    bankdata.dk/project-email: bdmupi@bankdata.dk
+    bankdata.dk/project-owner: bdujsk
+    openshift.io/description: "Automation Highway Gitops"
+    openshift.io/requester: bdujsk
+    argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/compare-options: IgnoreExtraneous
+

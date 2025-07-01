@@ -1,0 +1,6 @@
+apiVersion: v2
+description: argocd for automation highway
+keywords:
+- pattern
+name: ose-argocd-ahx
+version: 0.0.1

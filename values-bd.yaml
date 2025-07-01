@@ -4,17 +4,19 @@ global:
     syncPolicy: Automatic
     installPlanApproval: Automatic
 clusterGroup:
-  name: bd            #  clusterGroup=bd
+  name: bd            #  clusterGroup=bd     namespace bliver til validated Pattern navn  + dette navn  -->   ose-gitops-bd namespace som er dette clusters apps ex propropro mm,  (  openshift-gitops namespace indeholder ose-gitops-bd argo app  )
 #  name: group-one    #  husk label clusterGroup=group-one paa bd-oob-dev cluster
   isHubCluster: false
   namespaces:
     - hello-world
     - sample-app
     - sample-app2
+#    - ose-gitops-ahx
   projects:
     - hello-world
     - sample-app
     - sample-app2
+    - ose-gitops-ahx
   subscriptions:
     arcade:
       channel: alpha
@@ -24,6 +26,11 @@ clusterGroup:
       sourceNamespace: openshift-marketplace
       startingCSV: marketplace-games-operator.v1.0.0
   applications:
+    ose-gitops-ahx:
+      name: ose-gitops-ahx
+      namespace: ose-gitops-ahx
+      project: ose-gitops-ahx
+      path: charts/bd/ose-gitops-ahx
     hello-world:
       name: hello-world
       namespace: hello-world
