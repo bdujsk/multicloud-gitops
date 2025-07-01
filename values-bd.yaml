@@ -11,7 +11,7 @@ clusterGroup:
     - hello-world
     - sample-app
     - sample-app2
-#    - ose-gitops-ahx
+    - ose-gitops-ahx
   projects:
     - hello-world
     - sample-app
