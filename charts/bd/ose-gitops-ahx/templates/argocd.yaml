@@ -16,6 +16,9 @@ spec:
     grpc:
       ingress:
         enabled: false
+    notifications:
+      enabled: true
+      logLevel: warn
     ingress:
       enabled: false
     resources:
