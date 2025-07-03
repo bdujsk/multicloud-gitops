@@ -8,15 +8,15 @@ clusterGroup:
 #  name: group-one    #  husk label clusterGroup=group-one paa bd-oob-dev cluster
   isHubCluster: false
   namespaces:
-#    - hello-world
+    - hello-world
+    - ose-gitops-ahx
 #    - sample-app
 #    - sample-app2
-    - ose-gitops-ahx
   projects:
-#    - hello-world
+    - hello-world
+    - ose-gitops-ahx
 #    - sample-app
 #    - sample-app2
-    - ose-gitops-ahx
   subscriptions:
     arcade:
       channel: alpha
@@ -31,11 +31,11 @@ clusterGroup:
       namespace: ose-gitops-ahx
       project: ose-gitops-ahx
       path: charts/bd/ose-gitops-ahx
-#    hello-world:
-#      name: hello-world
-#      namespace: hello-world
-#      project: hello-world
-#      path: charts/all/hello-world
+    hello-world:
+      name: hello-world
+      namespace: hello-world
+      project: hello-world
+      path: charts/all/hello-world
 #    sample-app:
 #      name: sample-app
 #      namespace: sample-app
