@@ -10,15 +10,15 @@ metadata:
   labels:
     app.kubernetes.io/instance: ose-gitops-ahx-new
 spec:
+  notifications:
+    enabled: true
+    logLevel: warn
   server:
     autoscale:
       enabled: false
     grpc:
       ingress:
         enabled: false
-    notifications:
-      enabled: true
-      logLevel: warn
     ingress:
       enabled: false
     resources:
