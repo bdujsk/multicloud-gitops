@@ -4,6 +4,11 @@ clusterGroup:
   namespaces:
     - open-cluster-management
     - hello-world
+  # Ways to  find subscription names :
+  # You can install the operator from the console and then check the subscription/csv of it to determine the correct values
+  # You can search for the operator name with the command (in this example I'm search for operator with the name efs in it's name):
+  #    oc get packagemanifests -o custom-columns=NAME:.metadata.name | grep efs
+  #    and then find the other values with the command oc get packagemanifests aws-efs-csi-driver-operator -o yaml
   subscriptions:
     acm:
       name: advanced-cluster-management
@@ -13,6 +18,7 @@ clusterGroup:
   projects:
     - hub
     - hello-world
+    - bd-ose-management-i1
   # Explicitly mention the cluster-state based overrides we plan to use for this pattern.
   # We can use self-referential variables because the chart calls the tpl function with these variables defined
   sharedValueFiles:
@@ -45,6 +51,13 @@ clusterGroup:
           kind: ManagedClusterInfo
           jsonPointers:
             - /spec/loggingCA
+    bd-ose-management-i1:
+      name: bd-ose-management-i1
+      namespace: ose-gitops-hub
+      project: bd-ose-management-i1
+      repoURL: https://github.com/bd-b0100/ose-openshift-bootstrap.git
+      path: cluster-app
+      targetRevision: init-ose-services
     hello-world:
       name: hello-world
       namespace: hello-world
