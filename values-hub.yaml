@@ -17,9 +17,13 @@ clusterGroup:
       channel: release-2.11
       #csv: advanced-cluster-management.v2.6.1
     opentelemetry:
+      channel: stable
+      installPlanApproval: Automatic
       name: opentelemetry-product
       namespace: openshift-opentelemetry-operator
-      channel: stable
+      source: redhat-operators
+      sourceNamespace: openshift-marketplace
+      startingCSV: opentelemetry-operator.v0.127.0-1
   projects:
     - hub
     - hello-world
