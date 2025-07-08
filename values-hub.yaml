@@ -3,8 +3,10 @@ clusterGroup:
   isHubCluster: true
   namespaces:
     - open-cluster-management
-    - openshift-opentelemetry-operator
     - hello-world
+    - openshift-opentelemetry-operator:
+        operatorGroup: true
+        targetNamespaces:
   # Ways to  find subscription names :
   # You can install the operator from the console and then check the subscription/csv of it to determine the correct values
   # You can search for the operator name with the command (in this example I'm search for operator with the name efs in it's name):
@@ -24,7 +26,6 @@ clusterGroup:
       source: redhat-operators
       sourceNamespace: openshift-marketplace
       startingCSV: opentelemetry-operator.v0.127.0-1
-      installMode: AllNamespaces
   projects:
     - hub
     - hello-world
