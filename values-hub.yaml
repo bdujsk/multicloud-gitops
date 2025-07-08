@@ -3,6 +3,7 @@ clusterGroup:
   isHubCluster: true
   namespaces:
     - open-cluster-management
+    - openshift-opentelemetry-operator
     - hello-world
   # Ways to  find subscription names :
   # You can install the operator from the console and then check the subscription/csv of it to determine the correct values
@@ -15,6 +16,10 @@ clusterGroup:
       namespace: open-cluster-management
       channel: release-2.11
       #csv: advanced-cluster-management.v2.6.1
+    opentelemetry:
+      name: opentelemetry-operator
+      namespace: openshift-opentelemetry-operator
+      channel: stable
   projects:
     - hub
     - hello-world
