@@ -59,11 +59,11 @@ clusterGroup:
       repoURL: https://github.com/bd-b0100/ose-openshift-bootstrap.git
       path: cluster-app
       targetRevision: init-ose-services
-    hello-world:
-      name: hello-world
-      namespace: hello-world
-      project: hello-world
-      path: charts/all/hello-world
+    #hello-world:
+    #  name: hello-world
+    #  namespace: hello-world
+    #  project: hello-world
+    #  path: charts/all/hello-world
   imperative:
     # NOTE: We *must* use lists and not hashes. As hashes lose ordering once parsed by helm
     # The default schedule is every 10 minutes: imperative.schedule
