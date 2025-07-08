@@ -19,7 +19,7 @@ clusterGroup:
     opentelemetry:
       name: opentelemetry-operator
       namespace: openshift-opentelemetry-operator
-      channel: stable
+      channel: v0.127.0-1
   projects:
     - hub
     - hello-world
