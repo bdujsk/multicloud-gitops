@@ -2,6 +2,7 @@ clusterGroup:
   name: hub      #  namespace bliver til validated Pattern navn  + dette navn  -->   ose-gitops-hub namespace  som er dette clusters apps ex propropro mm    (  openshift-gitops namespace indeholder ose-gitops-hub argo app)
   isHubCluster: true
   namespaces:
+    - ack-system
     - open-cluster-management
     - hello-world
     - openshift-opentelemetry-operator:
@@ -26,6 +27,14 @@ clusterGroup:
       source: redhat-operators
       sourceNamespace: openshift-marketplace
       startingCSV: opentelemetry-operator.v0.127.0-1
+    s3:
+      channel: alpha
+      installPlanApproval: Automatic
+      namespace: ack-system
+      name: ack-s3-controller
+      source: community-operators
+      sourceNamespace: openshift-marketplace
+      startingCSV: ack-s3-controller.v1.0.33
   projects:
     - hub
     - hello-world
