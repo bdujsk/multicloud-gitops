@@ -79,6 +79,13 @@ clusterGroup:
       repoURL: https://github.com/bd-b0100/ose-openshift-bootstrap.git
       path: bd-ose-management-i1/cluster-app
       targetRevision: init-ose-services
+  #
+    general-configs:
+      project: hub
+      name: general-configs
+      kustomize: true
+      path: charts/hub/general-configs/base
+
     #hello-world:
     #  name: hello-world
     #  namespace: hello-world
