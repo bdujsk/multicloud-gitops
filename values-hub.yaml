@@ -71,14 +71,14 @@ clusterGroup:
           kind: ManagedClusterInfo
           jsonPointers:
             - /spec/loggingCA
-    bd-ose-management-i1:
-      name: bd-ose-management-i1
-      namespace: ose-gitops-hub
-      project: bd-ose-management-i1
-      kustomize: true
-      repoURL: https://github.com/bd-b0100/ose-openshift-bootstrap.git
-      path: bd-ose-management-i1/cluster-app
-      targetRevision: init-ose-services
+    #bd-ose-management-i1:
+    #  name: bd-ose-management-i1
+    #  namespace: ose-gitops-hub
+    #  project: bd-ose-management-i1
+    #  kustomize: true
+    #  repoURL: https://github.com/bd-b0100/ose-openshift-bootstrap.git
+    #  path: bd-ose-management-i1/cluster-app
+    #  targetRevision: init-ose-services
   #
     general-configs:
       project: hub
