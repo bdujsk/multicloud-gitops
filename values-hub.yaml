@@ -80,11 +80,11 @@ clusterGroup:
     #  path: bd-ose-management-i1/cluster-app
     #  targetRevision: init-ose-services
   #
-    general-configs:
-      project: hub
-      name: general-configs
-      kustomize: true
-      path: charts/hub/general-configs/base
+    #general-configs:
+    #  project: hub
+    #  name: general-configs
+    #  kustomize: true
+    #  path: charts/hub/general-configs/base
 
     #hello-world:
     #  name: hello-world
