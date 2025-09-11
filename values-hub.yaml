@@ -2,12 +2,12 @@ clusterGroup:
   name: hub      #  namespace bliver til validated Pattern navn  + dette navn  -->   ose-gitops-hub namespace  som er dette clusters apps ex propropro mm    (  openshift-gitops namespace indeholder ose-gitops-hub argo app)
   isHubCluster: true
   namespaces:
-    - ack-system
+    #- ack-system
     - open-cluster-management
-    - hello-world
-    - openshift-opentelemetry-operator:
-        operatorGroup: true
-        targetNamespaces:
+    #- hello-world
+    #- openshift-opentelemetry-operator:
+    #    operatorGroup: true
+    #    targetNamespaces:
   # Ways to  find subscription names :
   # You can install the operator from the console and then check the subscription/csv of it to determine the correct values
   # You can search for the operator name with the command (in this example I'm search for operator with the name efs in it's name):
@@ -19,26 +19,26 @@ clusterGroup:
       namespace: open-cluster-management
       channel: release-2.11
       #csv: advanced-cluster-management.v2.6.1
-    opentelemetry:   #tip: manually install first, and then search "sub" and find the data in yaml
-      channel: stable
-      installPlanApproval: Automatic
-      name: opentelemetry-product
-      namespace: openshift-opentelemetry-operator
-      source: redhat-operators
-      sourceNamespace: openshift-marketplace
-      startingCSV: opentelemetry-operator.v0.127.0-1
-    s3:
-      channel: alpha
-      installPlanApproval: Automatic
-      namespace: ack-system
-      name: ack-s3-controller
-      source: community-operators
-      sourceNamespace: openshift-marketplace
-      startingCSV: ack-s3-controller.v1.0.33
+    #opentelemetry:   #tip: manually install first, and then search "sub" and find the data in yaml
+    #  channel: stable
+    #  installPlanApproval: Automatic
+    #  name: opentelemetry-product
+    #  namespace: openshift-opentelemetry-operator
+    #  source: redhat-operators
+    #  sourceNamespace: openshift-marketplace
+    #  startingCSV: opentelemetry-operator.v0.127.0-1
+    #s3:
+    #  channel: alpha
+    #  installPlanApproval: Automatic
+    #  namespace: ack-system
+    #  name: ack-s3-controller
+    #  source: community-operators
+    #  sourceNamespace: openshift-marketplace
+    #  startingCSV: ack-s3-controller.v1.0.33
   projects:
     - hub
-    - hello-world
-    - bd-ose-management-i1
+    #- hello-world
+    #- bd-ose-management-i1
   # Explicitly mention the cluster-state based overrides we plan to use for this pattern.
   # We can use self-referential variables because the chart calls the tpl function with these variables defined
   sharedValueFiles:
