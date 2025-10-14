@@ -76,7 +76,7 @@ clusterGroup:
     #  namespace: ose-gitops-hub
     #  project: bd-ose-management-i1
     #  kustomize: true
-    #  repoURL: https://github.com/bd-b0100/ose-openshift-bootstrap.git
+    #  repoURL: https://github.com/xxxxxxxx/ose-openshift-bootstrap.git
     #  path: bd-ose-management-i1/cluster-app
     #  targetRevision: init-ose-services
   #
